@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { cn } from '@/lib/utils'
 import { Variants } from 'framer-motion'
-import Orb from './orb'
+import Orb from '../ui/orb'
 import { SparklesText } from '@/components/ui/sparkles-text'
 
 const transitionVariants: { container?: Variants; item?: Variants } = {
@@ -75,6 +75,7 @@ export function HeroSection() {
                                 },
                             }}
                             className="absolute inset-0 -z-20">
+                            {/* This section is for future application interface */}
                             <Image
                                 src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=3276&auto=format&fit=crop"
                                 alt="background"
@@ -191,10 +192,10 @@ export function HeroSection() {
 }
 
 const menuItems = [
-    { name: 'Features', href: '#link' },
-    { name: 'Solution', href: '#link' },
-    { name: 'Pricing', href: '#link' },
-    { name: 'About', href: '#link' },
+    { name: 'Features', href: '#features' },
+    { name: 'Solution', href: '#solution' },
+    { name: 'Pricing', href: '#pricing' },
+    { name: 'About', href: '#about' },
 ]
 
 const HeroHeader = () => {
