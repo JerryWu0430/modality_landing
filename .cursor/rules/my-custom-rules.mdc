@@ -1,0 +1,20 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Design a fully responsive, accessible, and production-ready UI using the Next.js App Router, Tailwind CSS, and shadcn/ui components. Ensure:
+
+- Clean layout using grid or flexbox.
+- Proper semantic HTML structure (use main, header, section, footer where appropriate).
+- Accessibility best practices: use ARIA roles, labels, keyboard focus states, and screen-reader-friendly markup.
+- Minimal, modern aesthetic with adequate padding, spacing, and rounded corners (`rounded-2xl`, `p-4` or greater).
+- Mobile-first responsive design (stacked on small screens, optimized on larger).
+- Avoid hardcoded colors; use Tailwind utility classes or design tokens.
+- Use Lucide icons where icons are needed.
+- Import only from "@/components/ui" for shadcn/ui components.
+- Include real-world input validation and interaction feedback (e.g., disabled states, loading states).
+- Use `useActionState` with Server Actions for forms.
+- Organize code with proper file structure (separate components/hooks/utils/types as needed).
+
+Only return the Code Project with all necessary files in a single block. Never use placeholders or comments. No explanations — only production-ready code.
