@@ -9,6 +9,7 @@ import { AnimatedGroup } from '@/components/ui/animated-group'
 import { cn } from '@/lib/utils'
 import { Variants } from 'framer-motion'
 import Orb from './orb'
+import { SparklesText } from '@/components/ui/sparkles-text'
 
 const transitionVariants: { container?: Variants; item?: Variants } = {
     item: {
@@ -94,7 +95,13 @@ export function HeroSection() {
                                             fontStyle: 'italic'
                                         }}
                                         className="mt-8 max-w-4xl mx-auto text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem] font-garamond italic font-light">
-                                        Try On Anything. Instantly. AI-Powered.
+                                        Try On Anything. Instantly.{' '}
+                                        <span className="inline-block">
+                                            <SparklesText 
+                                                text="AI-Powered" 
+                                                className="font-garamond italic font-light"
+                                            />
+                                        </span>
                                     </h1>
                                     <p
                                         className="mx-auto mt-8 max-w-2xl text-balance text-lg">
@@ -119,7 +126,7 @@ export function HeroSection() {
                                     <Link
                                         href="#link"
                                         className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
-                                        <span className="text-foreground text-sm">Book a Demo</span>
+                                        <span className="text-foreground text-l">Book a Demo</span>
                                         <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
                                         <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
@@ -158,16 +165,16 @@ export function HeroSection() {
                                 <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
                                     <Image
                                         className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
-                                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=3270&auto=format&fit=crop"
-                                        alt="app screen"
+                                        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=3270&auto=format&fit=crop"
+                                        alt="AI technology interface"
                                         width={2700}
                                         height={1440}
                                         priority
                                     />
                                     <Image
                                         className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
-                                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=3270&auto=format&fit=crop"
-                                        alt="app screen"
+                                        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=3270&auto=format&fit=crop"
+                                        alt="AI technology interface"
                                         width={2700}
                                         height={1440}
                                         priority
@@ -205,8 +212,8 @@ const HeroHeader = () => {
         <header>
             <nav
                 data-state={menuState && 'active'}
-                className="fixed z-20 w-full px-2 group h-10">
-                <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12 rounded-full', isScrolled && 'bg-background/50 max-w-4xl border backdrop-blur-lg lg:px-5')}>
+                className="fixed z-20 w-full px-2 group h-10 mt-2">
+                <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12 rounded-full', isScrolled && 'bg-background/50 max-w-3xl border backdrop-blur-lg lg:px-5')}>
                     <div className="relative flex flex-wrap items-center justify-between gap-6 py-2 lg:gap-0 lg:py-2">
                         <div className="flex w-full justify-between lg:w-auto">
                             <Link
