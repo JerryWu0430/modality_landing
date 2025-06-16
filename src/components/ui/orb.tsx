@@ -1,20 +1,22 @@
+'use client';
+
 import { useEffect, useRef } from "react";
 import { Renderer, Program, Mesh, Triangle, Vec3 } from "ogl";
-
-import './Orb.css';
 
 interface OrbProps {
   hue?: number;
   hoverIntensity?: number;
   rotateOnHover?: boolean;
   forceHoverState?: boolean;
+  opacity?: number;
 }
 
 export default function Orb({
-  hue = 0,
-  hoverIntensity = 0.2,
+  hue = 220,
+  hoverIntensity = 1,
   rotateOnHover = true,
   forceHoverState = false,
+  opacity = 0.5,
 }: OrbProps) {
   const ctnDom = useRef<HTMLDivElement>(null);
 
@@ -287,5 +289,11 @@ export default function Orb({
     };
   }, [hue, hoverIntensity, rotateOnHover, forceHoverState]);
 
-  return <div ref={ctnDom} className="orb-container" />;
+  return (
+    <div
+      ref={ctnDom}
+      style={{ opacity }}
+      className="absolute inset-0 w-full h-full pointer-events-none"
+    />
+  );
 }
