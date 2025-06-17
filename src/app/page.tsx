@@ -1,5 +1,5 @@
-import { HeroSection } from '@/components/sections/hero-section'
-import { PricingSection } from '@/components/sections/pricing-section'
+import { HeroSection } from '@/app/sections/hero-section'
+import { PricingSection } from '@/app/sections/pricing-section'
 
 
 export default function Home() {

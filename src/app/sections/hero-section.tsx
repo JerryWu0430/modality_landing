@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { cn } from '@/lib/utils'
 import { Variants } from 'framer-motion'
-import Orb from '../ui/orb'
+import Orb from '../../components/ui/orb'
 import { SparklesText } from '@/components/ui/sparkles-text'
 
 const transitionVariants: { container?: Variants; item?: Variants } = {
@@ -196,6 +196,7 @@ const menuItems = [
     { name: 'Solution', href: '#solution' },
     { name: 'Pricing', href: '#pricing' },
     { name: 'About', href: '#about' },
+    { name: 'Dashboard', href: '/dashboard' },
 ]
 
 const HeroHeader = () => {
