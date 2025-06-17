@@ -64,10 +64,10 @@ export function SparklesText({ text, className, colors = { first: "#9E7AFF", sec
       setSparkles(prev => [...prev, { id, x, y }]);
       setTimeout(() => {
         setSparkles(prev => prev.filter(sparkle => sparkle.id !== id));
-      }, 100);
+      }, 1000);
     };
 
-    const interval = setInterval(createSparkle, 100000);
+    const interval = setInterval(createSparkle, 300);
     return () => clearInterval(interval);
   }, []);
 
@@ -78,9 +78,9 @@ export function SparklesText({ text, className, colors = { first: "#9E7AFF", sec
         <motion.div
           key={sparkle.id}
           initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 0.5 }}
+          animate={{ scale: 1, opacity: 0.8 }}
           exit={{ scale: 0, opacity: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
           className="absolute pointer-events-none"
           style={{
             left: sparkle.x,

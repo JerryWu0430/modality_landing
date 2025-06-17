@@ -214,7 +214,7 @@ const HeroHeader = () => {
             <nav
                 data-state={menuState && 'active'}
                 className="fixed z-20 w-full px-2 group h-10 mt-2">
-                <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12 rounded-full', isScrolled && 'bg-background/50 max-w-3xl border backdrop-blur-lg lg:px-5')}>
+                <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12 rounded-full bg-background/50 border backdrop-blur-lg lg:px-5', isScrolled && 'max-w-3xl')}>
                     <div className="relative flex flex-wrap items-center justify-between gap-6 py-2 lg:gap-0 lg:py-2">
                         <div className="flex w-full justify-between lg:w-auto">
                             <Link
@@ -226,7 +226,7 @@ const HeroHeader = () => {
                                     alt="Logo"
                                     width={32}
                                     height={32}
-                                    className="rounded-none"
+                                    className="rounded-none ml-1"
                                     priority
                                 />
                                 {!isScrolled && (
