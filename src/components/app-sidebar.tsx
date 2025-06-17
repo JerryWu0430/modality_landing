@@ -1,13 +1,13 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
 import {
   AudioWaveform,
   BookOpen,
   Bot,
   Command,
   Frame,
-  GalleryVerticalEnd,
   Map,
   PieChart,
   Settings2,
@@ -26,26 +26,42 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 
+// Custom Modality Logo Component
+const ModalityLogo = React.forwardRef<HTMLImageElement, Omit<React.ComponentProps<typeof Image>, 'src' | 'alt'>>(
+  ({ className, ...props }, ref) => (
+    <Image
+      ref={ref}
+      src="/icon.png"
+      alt="Modality"
+      width={16}
+      height={16}
+      className={className}
+      {...props}
+    />
+  )
+)
+ModalityLogo.displayName = "ModalityLogo"
+
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "Jerry Wu",
+    email: "woohaoran@gmail.com",
     avatar: "/avatars/shadcn.jpg",
   },
   teams: [
     {
-      name: "Acme Inc",
-      logo: GalleryVerticalEnd,
+      name: "Modality",
+      logo: ModalityLogo,
       plan: "Enterprise",
     },
     {
-      name: "Acme Corp.",
+      name: "UCL.",
       logo: AudioWaveform,
       plan: "Startup",
     },
     {
-      name: "Evil Corp.",
+      name: "UoW",
       logo: Command,
       plan: "Free",
     },
@@ -57,6 +73,10 @@ const data = {
       icon: SquareTerminal,
       isActive: true,
       items: [
+        {
+          title: "Virtual Try-On",
+          url: "/playground",
+        },
         {
           title: "History",
           url: "#",

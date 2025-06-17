@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Menu, X, AppWindow } from 'lucide-react'
+import { ArrowRight, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { cn } from '@/lib/utils'
@@ -75,13 +75,12 @@ export function HeroSection() {
                                 },
                             }}
                             className="absolute inset-0 -z-20">
-                            {/* This section is for future application interface */}
                             <Image
-                                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=3276&auto=format&fit=crop"
-                                alt="background"
-                                className="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 dark:block"
-                                width={3276}
-                                height={4095}
+                                src="/demo.png"
+                                alt="Demo preview"
+                                width={1920}
+                                height={1080}
+                                className="w-full h-auto"
                                 priority
                             />
                         </AnimatedGroup>
@@ -165,19 +164,19 @@ export function HeroSection() {
                                 />
                                 <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
                                     <Image
-                                        className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
-                                        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=3270&auto=format&fit=crop"
-                                        alt="AI technology interface"
-                                        width={2700}
-                                        height={1440}
+                                        src="/demo.png"
+                                        alt="Demo preview"
+                                        width={1920}
+                                        height={1080}
+                                        className="bg-background relative hidden rounded-2xl dark:block"
                                         priority
                                     />
                                     <Image
-                                        className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
-                                        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=3270&auto=format&fit=crop"
-                                        alt="AI technology interface"
-                                        width={2700}
-                                        height={1440}
+                                        src="/demo.png"
+                                        alt="Demo preview"
+                                        width={1920}
+                                        height={1080}
+                                        className="z-2 border-border/25 relative rounded-2xl border dark:hidden"
                                         priority
                                     />
                                 </div>
