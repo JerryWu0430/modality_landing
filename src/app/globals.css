@@ -119,12 +119,113 @@
   height: 100%;
 }
 
+/* Ultra Fluid and Responsive Design System */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Fluid Spacing System */
+  .fluid-padding {
+    padding: clamp(1rem, 5vw, 4rem);
+  }
+
+  .fluid-margin {
+    margin: clamp(1rem, 5vw, 4rem);
+  }
+
+  .fluid-gap {
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+
+  /* Container Queries Support */
+  .container-query {
+    container-type: inline-size;
+  }
+
+  @container (min-width: 500px) {
+    .card-responsive {
+      flex-direction: row;
+      padding: clamp(1.5rem, 4vw, 3rem);
+    }
+  }
+
+  @container (min-width: 800px) {
+    .grid-responsive {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+
+  /* Fluid Grid System */
+  .fluid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+
+  .fluid-grid-sm {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+  }
+
+  .fluid-grid-lg {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+    gap: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  /* Fluid Container System */
+  .fluid-container {
+    width: 100%;
+    max-width: min(90vw, 1200px);
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+  }
+
+  .fluid-container-sm {
+    width: 100%;
+    max-width: min(95vw, 800px);
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 3vw, 2rem);
+  }
+
+  .fluid-container-lg {
+    width: 100%;
+    max-width: min(85vw, 1400px);
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 6vw, 5rem);
+  }
+
+  /* Fluid Image System */
+  img, video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: clamp(0.5rem, 2vw, 1rem);
+  }
+
+  /* Fluid Button System */
+  .fluid-button {
+    padding: clamp(0.75rem, 2vw, 1.5rem) clamp(1.5rem, 4vw, 3rem);
+    border-radius: clamp(0.5rem, 2vw, 1rem);
+  }
+
+  /* Fluid Card System */
+  .fluid-card {
+    padding: clamp(1rem, 3vw, 2rem);
+    border-radius: clamp(0.75rem, 2.5vw, 1.5rem);
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+  }
+
+  /* Responsive Breakpoint Utilities */
+  .responsive-spacing {
+    padding: clamp(1rem, 3vw, 2rem);
+    margin: clamp(0.5rem, 2vw, 1.5rem);
   }
 }
 

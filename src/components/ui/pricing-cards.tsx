@@ -11,8 +11,8 @@ import { Button } from "@/components/ui/button";
 
 function Pricing() {
   return (
-    <div className="w-full py-20 lg:py-40">
-      <div className="container mx-auto">
+    <div className="w-full responsive-spacing">
+      <div className="fluid-container">
         <div className="flex text-center justify-center items-center gap-4 flex-col">
           <Badge>Pricing</Badge>
           <div className="flex gap-2 flex-col">
@@ -23,8 +23,8 @@ function Pricing() {
               Managing a small business today is already tough.
             </p>
           </div>
-          <div className="grid pt-20 text-left grid-cols-1 lg:grid-cols-3 w-full gap-8">
-            <Card className="w-full rounded-md">
+          <div className="fluid-grid pt-20 w-full">
+            <Card className="w-full rounded-md fluid-card container-query">
               <CardHeader>
                 <CardTitle>
                   <span className="flex flex-row gap-4 items-center font-normal">
@@ -74,13 +74,13 @@ function Pricing() {
                       </div>
                     </div>
                   </div>
-                  <Button variant="outline" className="gap-4">
+                  <Button variant="outline" className="gap-4 fluid-button">
                     Sign up today <MoveRight className="w-4 h-4" />
                   </Button>
                 </div>
               </CardContent>
             </Card>
-            <Card className="w-full shadow-2xl rounded-md">
+            <Card className="w-full shadow-2xl rounded-md fluid-card container-query">
               <CardHeader>
                 <CardTitle>
                   <span className="flex flex-row gap-4 items-center font-normal">
@@ -130,13 +130,13 @@ function Pricing() {
                       </div>
                     </div>
                   </div>
-                  <Button className="gap-4">
+                  <Button className="gap-4 fluid-button">
                     Sign up today <MoveRight className="w-4 h-4" />
                   </Button>
                 </div>
               </CardContent>
             </Card>
-            <Card className="w-full rounded-md">
+            <Card className="w-full rounded-md fluid-card container-query">
               <CardHeader>
                 <CardTitle>
                   <span className="flex flex-row gap-4 items-center font-normal">
@@ -186,7 +186,7 @@ function Pricing() {
                       </div>
                     </div>
                   </div>
-                  <Button variant="outline" className="gap-4">
+                  <Button variant="outline" className="gap-4 fluid-button">
                     Book a meeting <PhoneCall className="w-4 h-4" />
                   </Button>
                 </div>

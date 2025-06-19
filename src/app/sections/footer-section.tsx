@@ -64,7 +64,7 @@ const socialLinks = [
 export function FooterSection() {
   return (
     <footer className="w-full bg-background border-t">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-8">
+      <div className="fluid-container py-8">
         <AnimatedGroup
           variants={{
             container: {
@@ -77,7 +77,7 @@ export function FooterSection() {
             },
             ...transitionVariants,
           }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6"
+          className="fluid-grid md:grid-cols-2 lg:grid-cols-6"
         >
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
