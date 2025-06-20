@@ -126,7 +126,7 @@ export function HeroSection() {
                                     <Link
                                         href="#link"
                                         className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950 fluid-button">
-                                        <span className="text-foreground text-l">Book a Demo</span>
+                                        <span className="text-foreground text-xl">Book a Demo</span>
                                         <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
                                         <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
@@ -158,27 +158,28 @@ export function HeroSection() {
                                 ...transitionVariants,
                             }}>
                             <div className="relative -mr-56 mt-8 overflow-hidden px-2 sm:mr-0 sm:mt-12 md:mt-20">
-                                <div
-                                    aria-hidden
-                                    className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
-                                />
-                                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1 fluid-card">
-                                    <Image
-                                        src="/demo.png"
-                                        alt="Demo preview"
-                                        width={1920}
-                                        height={1080}
-                                        className="bg-background relative hidden rounded-2xl dark:block"
-                                        priority
-                                    />
-                                    <Image
-                                        src="/demo.png"
-                                        alt="Demo preview"
-                                        width={1920}
-                                        height={1080}
-                                        className="z-2 border-border/25 relative rounded-2xl border dark:hidden"
-                                        priority
-                                    />
+                                <div className="relative mx-auto max-w-6xl">
+                                    {/* Mac Window Frame */}
+                                    <div className="bg-gray-100 rounded-t-xl p-3 shadow-2xl">
+                                        {/* Window Controls */}
+                                        <div className="flex items-center space-x-2 mb-3">
+                                            <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                                            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                                        </div>
+                                        
+                                        {/* Demo Image Container */}
+                                        <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+                                            <Image
+                                                src="/demo.png"
+                                                alt="Demo preview"
+                                                width={1920}
+                                                height={1080}
+                                                className="w-full h-auto"
+                                                priority
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </AnimatedGroup>
