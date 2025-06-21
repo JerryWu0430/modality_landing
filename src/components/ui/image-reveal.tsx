@@ -251,7 +251,7 @@ const Component = React.forwardRef<HTMLDivElement, ComponentProps>(
                 h2SizeClasses[size],
                 activeMedia?.id === media.id
                   ? 'mix-blend-difference z-20 text-gray-300'
-                  : 'text-gray-700 dark:text-gray-300'
+                  : 'text-black'
               )}
             >
               {media.alt}

@@ -26,10 +26,7 @@ const transitionVariants: { container?: Variants; item?: Variants } = {
 };
 
 const faqs = [
-  {
-    question: 'How accurate is the virtual try-on technology?',
-    answer: 'Our AI-powered virtual try-on technology achieves 95%+ accuracy in fit prediction and visual representation. The system uses advanced computer vision algorithms trained on millions of fashion items and body types to provide realistic, personalized try-on experiences.'
-  },
+
   {
     question: 'What types of clothing can I try on virtually?',
     answer: 'Currently, we support tops, dresses, outerwear, and accessories. Our technology works best with structured clothing items. We\'re continuously expanding our catalog and adding new categories like pants, skirts, and swimwear.'
@@ -44,7 +41,7 @@ const faqs = [
   },
   {
     question: 'Can I use this technology on my e-commerce website?',
-    answer: 'Yes! We offer easy-to-integrate APIs and SDKs for e-commerce platforms. Our technology can be seamlessly integrated into your existing website or mobile app, helping increase conversion rates and reduce returns.'
+    answer: 'We are currently working on building easy-to-integrate APIs and SDKs for e-commerce platforms. Our technology then can be seamlessly integrated into your existing website or mobile app, helping increase conversion rates and reduce returns.'
   },
   {
     question: 'What are the system requirements?',
@@ -56,7 +53,7 @@ const faqs = [
   },
   {
     question: 'What makes Modality different from other virtual try-on solutions?',
-    answer: 'Unlike other solutions that use basic image overlays, our AI creates truly realistic, physics-based clothing simulations. We focus on fit accuracy, fabric behavior, and lighting to provide the most authentic virtual try-on experience available.'
+    answer: 'Unlike other solutions that use basic image overlays, our AI creates truly realistic, physics-based clothing simulations. Also allowing batch uploads and download which is a first in the industry. We also offer authentic video try-on to further decrease cost of production of your business. We focus on fit accuracy, fabric behavior, and lighting to provide the most authentic virtual try-on experience available.'
   }
 ];
 
