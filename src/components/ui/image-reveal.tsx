@@ -4,6 +4,7 @@
 import { MoveUpRight } from 'lucide-react';
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 interface MediaData {
   id: number;
@@ -187,9 +188,10 @@ const Component = React.forwardRef<HTMLDivElement, ComponentProps>(
     );
 
     if (asChild && React.isValidElement(children)) {
-      return React.cloneElement(children as React.ReactElement<any>, {
+      const childElement = children as React.ReactElement<React.HTMLAttributes<HTMLElement> & { ref?: React.Ref<HTMLElement> }>;
+      return React.cloneElement(childElement, {
         ref,
-        className: cn((children as React.ReactElement<any>).props.className, commonClasses),
+        className: cn(childElement.props.className, commonClasses),
         ...props,
       });
     }
@@ -219,10 +221,12 @@ const Component = React.forwardRef<HTMLDivElement, ComponentProps>(
         );
       }
       return (
-        <img
+        <Image
           src={media.src}
           alt={media.alt}
           className={className}
+          width={400}
+          height={400}
         />
       );
     };

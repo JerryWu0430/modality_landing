@@ -29,11 +29,11 @@ const faqs = [
 
   {
     question: 'What types of clothing can I try on virtually?',
-    answer: 'Currently, we support tops, dresses, outerwear, and accessories. Our technology works best with structured clothing items. We\'re continuously expanding our catalog and adding new categories like pants, skirts, and swimwear.'
+    answer: 'Currently, we support tops, dresses, outerwear, and accessories. Our technology works best with structured clothing items. We&apos;re continuously expanding our catalog and adding new categories like pants, skirts, and swimwear.'
   },
   {
     question: 'Do I need to upload photos of myself?',
-    answer: 'No, you don\'t need to upload personal photos. Our technology can work with a simple body measurement input or use our AI to estimate your body type from basic information. For the most accurate results, you can optionally upload a photo, but it\'s not required.'
+    answer: 'No, you don&apos;t need to upload personal photos. Our technology can work with a simple body measurement input or use our AI to estimate your body type from basic information. For the most accurate results, you can optionally upload a photo, but it&apos;s not required.'
   },
   {
     question: 'How does the technology handle different body types?',
@@ -143,7 +143,7 @@ export function FAQSection() {
         <AnimatedGroup variants={transitionVariants}>
           <div className="text-center mt-12">
             <p className="text-muted-foreground mb-4">
-              Still have questions? We're here to help.
+              Still have questions? We&apos;re here to help.
             </p>
             <a
               href="/contact"

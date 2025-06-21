@@ -3,8 +3,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-import { cn } from "@/lib/utils";
-
 interface SparklesTextProps {
   /**
    * @default <div />
@@ -50,7 +48,7 @@ interface SparklesTextProps {
   };
 }
 
-export function SparklesText({ text, className, colors = { first: "#9E7AFF", second: "#FE8BBB" }, sparklesCount = 10 }: SparklesTextProps) {
+export function SparklesText({ text, className }: SparklesTextProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [sparkles, setSparkles] = React.useState<Array<{ id: number; x: number; y: number }>>([]);
 
