@@ -75,7 +75,7 @@ export function PricingCardsSection() {
           }}
           className="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-8 w-full"
         >
-          <Card className="w-full rounded-md fluid-card container-query transition-all hover:scale-105 flex flex-col">
+          <Card className="w-full rounded-md fluid-card container-query transition-all hover:scale-101 flex flex-col">
             <CardHeader>
               <CardTitle>
                 <span className="flex flex-row gap-4 items-center font-normal text-4xl">
@@ -91,7 +91,7 @@ export function PricingCardsSection() {
                 <span className="text-5xl tracking-tighter">$0</span>
               </p>
               <div className="pt-6">
-                <Link href="/dashboard">
+                <Link href="/contact">
                   <Button variant="outline" className="gap-4 fluid-button w-full">
                     Sign up for free <MoveRight className="w-4 h-4" />
                   </Button>
@@ -114,7 +114,7 @@ export function PricingCardsSection() {
               </div>
             </CardContent>
           </Card>
-          <Card className="w-full rounded-md fluid-card container-query transition-all hover:scale-105 flex flex-col">
+          <Card className="w-full rounded-md fluid-card container-query transition-all hover:scale-101 flex flex-col">
             <CardHeader>
               <CardTitle>
                 <span className="flex flex-row gap-4 items-center font-normal text-4xl">
@@ -131,7 +131,7 @@ export function PricingCardsSection() {
                 <span className="text-sm text-muted-foreground">/ month</span>
               </p>
               <div className="pt-6">
-                <Link href="/dashboard">
+                <Link href="/contact">
                   <Button className="gap-4 fluid-button w-full bg-black text-white hover:bg-gray-800">
                     Get started <MoveRight className="w-4 h-4" />
                   </Button>
@@ -158,7 +158,7 @@ export function PricingCardsSection() {
               </div>
             </CardContent>
           </Card>
-          <Card className="w-full rounded-md fluid-card container-query transition-all hover:scale-105 bg-black text-white flex flex-col">
+          <Card className="w-full rounded-md fluid-card container-query transition-all hover:scale-101 bg-black text-white flex flex-col">
             <CardHeader>
               <CardTitle>
                 <span className="flex flex-row gap-4 items-center font-normal text-4xl">

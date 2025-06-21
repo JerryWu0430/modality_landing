@@ -125,7 +125,7 @@ export function HeroSection() {
                                     }}
                                     className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
                                     <Link
-                                        href="#link"
+                                        href="contact"
                                         className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950 fluid-button">
                                         <span className="text-foreground text-xl">Book a Demo</span>
                                         <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
@@ -282,7 +282,7 @@ const HeroHeader = () => {
                                         variant="outline"
                                         size="sm"
                                         className={cn(isScrolled && 'lg:hidden')}>
-                                        <Link href="#">
+                                        <Link href="contact">
                                             <span>Book a Demo</span>
                                         </Link>
                                     </Button>
@@ -290,7 +290,7 @@ const HeroHeader = () => {
                                         asChild
                                         size="sm"
                                         className={cn(isScrolled ? 'lg:inline-flex' : 'hidden')}>
-                                        <Link href="#">
+                                        <Link href="contact">
                                             <span>Book a Demo</span>
                                         </Link>
                                     </Button>

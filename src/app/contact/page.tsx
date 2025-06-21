@@ -3,7 +3,8 @@
 import React from 'react';
 import { useFormStatus } from 'react-dom';
 import { useActionState } from 'react';
-import { Mail, Phone, Building, User, MessageSquare } from 'lucide-react';
+import Link from 'next/link';
+import { Mail, Phone, Building, User, MessageSquare, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -46,7 +47,7 @@ export default function ContactPage() {
   const [state, formAction] = useActionState(submitForm, null);
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-4 bg-background">
+    <main className="min-h-screen relative flex items-center justify-center p-4 bg-background">
       <AnimatedGridPattern
         numSquares={30}
         maxOpacity={0.2}
@@ -56,10 +57,16 @@ export default function ContactPage() {
           '[--color:white] h-full w-full skew-y-12',
         )}
       />
-      <AnimatedGroup variants={transitionVariants}>
+      <AnimatedGroup variants={transitionVariants} className="relative z-10">
         <div className="light">
           <Card className="w-full max-w-lg">
             <CardHeader>
+              <Link href="/">
+                <Button variant="ghost" className="text-black -ml-4 mb-2">
+                  <ArrowLeft className="mr-2 h-4 w-4" />
+                  Back to Home
+                </Button>
+              </Link>
               <CardTitle>Book a Meeting</CardTitle>
               <CardDescription>
                 Please provide your details, and we'll get back to you to arrange a time.
