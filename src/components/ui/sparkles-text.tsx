@@ -3,6 +3,8 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
+import { cn } from "@/lib/utils";
+
 interface SparklesTextProps {
   /**
    * @default <div />
@@ -27,28 +29,45 @@ interface SparklesTextProps {
    * The text to be displayed
    * */
   text: string;
+
+  /**
+   * @default 10
+   * @type number
+   * @description
+   * The count of sparkles
+   * */
+  sparklesCount?: number;
+
+  /**
+   * @default "{first: '#9E7AFF', second: '#FE8BBB'}"
+   * @type string
+   * @description
+   * The colors of the sparkles
+   * */
+  colors?: {
+    first: string;
+    second: string;
+  };
 }
 
-export const SparklesText: React.FC<SparklesTextProps> = ({ text, className }) => {
+export function SparklesText({ text, className, colors = { first: "#9E7AFF", second: "#FE8BBB" }, sparklesCount = 10 }: SparklesTextProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [sparkles, setSparkles] = React.useState<Array<{ id: number; x: number; y: number }>>([]);
 
   useEffect(() => {
-    const generateSparkles = () => {
+    const createSparkle = () => {
       if (!containerRef.current) return;
-      
-      const container = containerRef.current;
-      const rect = container.getBoundingClientRect();
-      const newSparkles = Array.from({ length: 8 }, (_, i) => ({
-        id: i,
-        x: Math.random() * rect.width,
-        y: Math.random() * rect.height,
-      }));
-      setSparkles(newSparkles);
+      const rect = containerRef.current.getBoundingClientRect();
+      const x = Math.random() * rect.width;
+      const y = Math.random() * rect.height;
+      const id = Date.now();
+      setSparkles(prev => [...prev, { id, x, y }]);
+      setTimeout(() => {
+        setSparkles(prev => prev.filter(sparkle => sparkle.id !== id));
+      }, 1000);
     };
 
-    generateSparkles();
-    const interval = setInterval(generateSparkles, 2000);
+    const interval = setInterval(createSparkle, 300);
     return () => clearInterval(interval);
   }, []);
 
@@ -85,4 +104,4 @@ export const SparklesText: React.FC<SparklesTextProps> = ({ text, className }) =
       ))}
     </div>
   );
-};
+}
