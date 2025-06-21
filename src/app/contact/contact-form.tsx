@@ -44,7 +44,7 @@ export default function ContactFormClient() {
       </div>
       <div className="relative">
         <MessageSquare className="absolute left-3 top-3 h-5 w-5 text-muted-foreground" />
-        <Textarea name="message" placeholder="Tell us about your project or what you&apos;d like to see..." className="pl-10 min-h-32" required />
+        <Textarea name="message" placeholder="Tell us about your project or what you'd like to see..." className="pl-10 min-h-32" required />
       </div>
       <Button type="submit" className="w-full" disabled={isSubmitting}>
         {isSubmitting ? 'Sending...' : 'Request a Meeting'}

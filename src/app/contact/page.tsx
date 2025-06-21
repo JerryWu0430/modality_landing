@@ -39,7 +39,7 @@ export default function ContactPage() {
               </Link>
               <CardTitle>Book a Meeting</CardTitle>
               <CardDescription>
-                Please provide your details, and we&apos;ll get back to you to arrange a time.
+                Please provide your details, and we&#39;ll get back to you to arrange a time.
               </CardDescription>
             </CardHeader>
             <CardContent>
