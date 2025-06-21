@@ -167,6 +167,13 @@
   height: 100%;
 }
 
+.squares-canvas {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
 /* Ultra Fluid and Responsive Design System */
 @layer base {
   * {
@@ -293,3 +300,4 @@
   font-style: normal;
   font-display: swap;
 }
+

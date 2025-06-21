@@ -3,54 +3,44 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 import { AnimatedGroup } from '@/components/ui/animated-group';
 import { Variants } from 'framer-motion';
 
 const transitionVariants: { container?: Variants; item?: Variants } = {
-  item: {
-    hidden: {
-      opacity: 0,
-      filter: 'blur(12px)',
-      y: 12,
+    item: {
+        hidden: {
+            opacity: 0,
+            filter: 'blur(12px)',
+            y: 12,
+        },
+        visible: {
+            opacity: 1,
+            filter: 'blur(0px)',
+            y: 0,
+            transition: {
+                type: 'spring' as const,
+                bounce: 0.3,
+                duration: 1.5,
+            },
+        },
     },
-    visible: {
-      opacity: 1,
-      filter: 'blur(0px)',
-      y: 0,
-      transition: {
-        type: 'spring' as const,
-        bounce: 0.3,
-        duration: 1.5,
-      },
-    },
-  },
-};
+}
 
 const footerLinks = {
   product: [
     { name: 'Features', href: '#features' },
     { name: 'Pricing', href: '#pricing' },
-    { name: 'API', href: '/api' },
-    { name: 'Integrations', href: '/integrations' },
   ],
   company: [
     { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Press', href: '/press' },
+    { name: 'Blog', href: '' },
+    { name: 'Careers', href: '' },
   ],
   support: [
     { name: 'Help Center', href: '/help' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Status', href: '/status' },
     { name: 'Documentation', href: '/docs' },
-  ],
-  legal: [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'GDPR', href: '/gdpr' },
   ],
 };
 
@@ -77,16 +67,16 @@ export function FooterSection() {
             },
             ...transitionVariants,
           }}
-          className="fluid-grid md:grid-cols-2 lg:grid-cols-6"
+          className="fluid-grid md:grid-cols-2 lg:grid-cols-4"
         >
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-4">
+          <div className="lg:col-span-1">
+            <Link href="/" className="flex items-center space-x-0.5 mb-4">
               <Image
                 src="/icon.png"
                 alt="Modality Logo"
                 width={32}
                 height={32}
-                className="rounded-none"
+                className="w-8 h-8 rounded-none"
               />
               <span className="font-bold text-xl">ODALITY</span>
             </Link>
@@ -137,19 +127,6 @@ export function FooterSection() {
             <h3 className="font-semibold mb-3 text-sm">Support</h3>
             <ul className="space-y-1">
               {footerLinks.support.map((link) => (
-                <li key={link.name}>
-                  <Link href={link.href} className="text-muted-foreground hover:text-foreground transition-colors text-xs">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-3 text-sm">Legal</h3>
-            <ul className="space-y-1">
-              {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="text-muted-foreground hover:text-foreground transition-colors text-xs">
                     {link.name}
